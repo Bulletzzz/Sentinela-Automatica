@@ -8,7 +8,7 @@ while True:
     ret, frame = cap.read()
 
     cinza = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    rostos= rostodetect.detectMultiScale(cinza, 1.2, 5)
+    rostos= rostodetect.detectMultiScale(cinza, 1.2, 8)
     for (x, y, w, h) in rostos:
         cv2.rectangle(frame, (x,y), (x + w, y+ h), (255, 0, 0), 5)
 
